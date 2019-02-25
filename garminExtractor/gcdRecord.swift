@@ -1,3 +1,11 @@
+//
+//  gcdRecord.swift
+//  garminExtractor
+//
+//  Created by Romain Quidet on 25/02/2019.
+//  Copyright © 2019 XDAppfactory. All rights reserved.
+//
+
 import Foundation
 
 class GCDRecord {
@@ -17,7 +25,7 @@ class GCDRecord {
     
     init(id: uint16, data: Data) {
         self.id = id
-        self.data = data
+        self.data = Data(data)
         self.knownId = GCDRecordID(rawValue: id)
     }
     

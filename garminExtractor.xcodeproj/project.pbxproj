@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2FB9BD072224739B0072B0A3 /* gcdRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9BD062224739B0072B0A3 /* gcdRecord.swift */; };
+		2FB9BD092224916A0072B0A3 /* bootFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9BD082224916A0072B0A3 /* bootFirmware.swift */; };
+		2FB9BD0B22249E780072B0A3 /* FirmwareDescriptorStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9BD0A22249E780072B0A3 /* FirmwareDescriptorStructure.swift */; };
+		2FB9BD0D2224A5B80072B0A3 /* FirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9BD0C2224A5B80072B0A3 /* FirmwareInfo.swift */; };
 		36C13D9522241967001C2053 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C13D9422241967001C2053 /* main.swift */; };
 		36C13D9C222419B9001C2053 /* gcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C13D9B222419B9001C2053 /* gcd.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		2FB9BD062224739B0072B0A3 /* gcdRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gcdRecord.swift; sourceTree = "<group>"; };
+		2FB9BD082224916A0072B0A3 /* bootFirmware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bootFirmware.swift; sourceTree = "<group>"; };
+		2FB9BD0A22249E780072B0A3 /* FirmwareDescriptorStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmwareDescriptorStructure.swift; sourceTree = "<group>"; };
+		2FB9BD0C2224A5B80072B0A3 /* FirmwareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmwareInfo.swift; sourceTree = "<group>"; };
 		36C13D9122241967001C2053 /* garminExtractor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = garminExtractor; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C13D9422241967001C2053 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		36C13D9B222419B9001C2053 /* gcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gcd.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				36C13D9422241967001C2053 /* main.swift */,
 				36C13D9B222419B9001C2053 /* gcd.swift */,
 				2FB9BD062224739B0072B0A3 /* gcdRecord.swift */,
+				2FB9BD082224916A0072B0A3 /* bootFirmware.swift */,
+				2FB9BD0A22249E780072B0A3 /* FirmwareDescriptorStructure.swift */,
+				2FB9BD0C2224A5B80072B0A3 /* FirmwareInfo.swift */,
 			);
 			path = garminExtractor;
 			sourceTree = "<group>";
@@ -127,6 +136,9 @@
 			files = (
 				2FB9BD072224739B0072B0A3 /* gcdRecord.swift in Sources */,
 				36C13D9C222419B9001C2053 /* gcd.swift in Sources */,
+				2FB9BD0D2224A5B80072B0A3 /* FirmwareInfo.swift in Sources */,
+				2FB9BD092224916A0072B0A3 /* bootFirmware.swift in Sources */,
+				2FB9BD0B22249E780072B0A3 /* FirmwareDescriptorStructure.swift in Sources */,
 				36C13D9522241967001C2053 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

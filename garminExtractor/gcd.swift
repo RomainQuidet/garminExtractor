@@ -1,3 +1,11 @@
+//
+//  gcd.swift
+//  garminExtractor
+//
+//  Created by Romain Quidet on 25/02/2019.
+//  Copyright © 2019 XDAppfactory. All rights reserved.
+//
+
 import Foundation
 
 class GCD {
@@ -95,3 +103,10 @@ extension UInt16 {
 		return String(format:"0x%02X", self)
 	}
 }
+
+extension UInt8 {
+    var toHexString: String {
+        return String(format:"0x%01X", self)
+    }
+}
+
