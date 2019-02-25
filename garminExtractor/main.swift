@@ -1,12 +1,11 @@
-//
-//  main.swift
-//  garminExtractor
-//
-//  Created by mappy on 25/02/2019.
-//  Copyright © 2019 mappy. All rights reserved.
-//
-
 import Foundation
 
-print("Hello, World!")
+print("GARMIN firmware extractor")
+
+guard let gcd = GCD(with: CommandLine.arguments) else {
+	print("need a file arg")
+	exit(0)
+}
+
+print("=> found \(gcd.records.count) records")
 
