@@ -24,3 +24,7 @@ guard let bootFirmware = BootFirmware(gcd.records) else {
 
 print("=> found boot firmware")
 bootFirmware.printInfo()
+let originalFile = gcd.fileUrl
+var bootFmwFile = originalFile.deletingLastPathComponent()
+bootFmwFile = bootFmwFile.appendingPathComponent("bootFirmware.bin")
+bootFirmware.save(to: bootFmwFile)

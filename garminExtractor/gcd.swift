@@ -11,12 +11,13 @@ import Foundation
 class GCD {
     
     private(set) var records = [GCDRecord]()
-
+    let fileUrl: URL
+    
 	init?(with arguments: [String]) {
 		guard arguments.count > 1 else { return nil }
 		let gcdFilePath = arguments[1]
 		print("init with \(gcdFilePath)")
-		let fileUrl = URL(fileURLWithPath: gcdFilePath)
+        fileUrl = URL(fileURLWithPath: gcdFilePath)
 		guard let data = try? Data(contentsOf: fileUrl) else { return nil }
 		self.parse(data)
 	}
@@ -96,6 +97,10 @@ extension Data {
 		let tmp = self.to(type: UInt16.self)
 		return UInt16(littleEndian: tmp)
 	}
+    var asUInt32: UInt32 {
+        let tmp = self.to(type: UInt32.self)
+        return UInt32(littleEndian: tmp)
+    }
 }
 
 extension UInt16 {
@@ -110,3 +115,14 @@ extension UInt8 {
     }
 }
 
+extension UInt32 {
+    var toHexString: String {
+        return String(format:"0x%04X", self)
+    }
+}
+
+extension UInt {
+    var toHexString: String {
+        return String(format:"0x%04X", self)
+    }
+}

@@ -11,8 +11,7 @@ import Foundation
 class BootFirmware {
     
     private let data: Data
-    private let fmwDscStr: FirmwareDescriptorStructure
-    private let fmwDsc: GCDRecord
+    private let fmwInfo: FirmwareInfo
     
     init?(_ records: [GCDRecord]) {
         var firmwareDescriptorStructure: GCDRecord?
@@ -46,14 +45,17 @@ class BootFirmware {
             tmpData.append(record.data)
         }
         self.data = tmpData
-        self.fmwDscStr = fmwDscStr
-        self.fmwDsc = fmwDsc
+        self.fmwInfo = FirmwareInfo(fmwDscStr: fmwDscStr, fmwDsc: fmwDsc.data)
     }
     
     func printInfo() {
         print("Firmware descriptor structure")
-        self.fmwDscStr.items.forEach { (item) in
-            print("item: \(item.fieldID): \(item.fieldType.toHexString)")
+        self.fmwInfo.items.forEach { (item) in
+            print("item: \(item.fieldID): \(item.fieldValue.toHexString)")
         }
+    }
+    
+    func save(to path: URL) {
+        try? self.data.write(to: path)
     }
 }
